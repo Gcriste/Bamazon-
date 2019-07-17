@@ -86,14 +86,21 @@ function selectProduct() {
                     var currentStock = res[i].stock_quantity 
                     console.log(currentStock)
                     if (currentStock> answer.buy){
-                        console.log("Congratulations! You bought "+ answer.buy + " " +  res[i].product_name + "s for " + res[i].price + " dollars each for a total of " + (answer.buy * res[i].price) + " dollars.")
+                        var newStock = currentStock-answer.buy;
+                        connection.query("UPDATE products SET ? WHERE ?",
+                        [{
+                           stock_quantity:newStock
+                        },{
+                            item_id:answerId
+                        }])
+                        console.log("Congratulations! You bought "+ answer.buy + " " +  res[i].product_name + "s for " + res[i].price + " dollars each for a total of " + Math.floor((answer.buy * res[i].price)) + " dollars.")
                         currentProducts();
                     }
                     else{
                         console.log("I'm sorry there are not enough available in stock for your request. Please try again.")
                         currentProducts();
                     }
-                    // checkQuantity();
+                 
                 }
                 })
             })
@@ -102,30 +109,3 @@ function selectProduct() {
 
 
 
-
-
-//     if (boughtItem.stock > parseInt(answer.buy)) {
-//       // bid was high enough, so update db, let the user know, and start over
-//       connection.query(
-//         "UPDATE products SET ? WHERE ?",
-//         [
-//           {
-//           stock: stock_quantity-answer.buy
-//           },
-//         {
-//         id: chosenItem.id
-//         }
-
-//         ],
-//         function(error) {
-//           if (error) throw err;
-//           console.log("Congratulations you bought "+ answer.buy + "units");
-//           currentProducts();
-//         }
-//       );
-//     }
-//     else {
-//       // bid wasn't high enough, so apologize and start over
-//       console.log("We do not have that many units in stock, please try again.");
-//       currentProducts();
-//     }
