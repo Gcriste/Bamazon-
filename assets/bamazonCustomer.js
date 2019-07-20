@@ -41,7 +41,7 @@ function currentProducts() {
                 stock: results[i].stock_quantity
             })
         }
-        console.log(choiceArray);
+        console.table(choiceArray);
         selectProduct();
 
     })
