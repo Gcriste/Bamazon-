@@ -5,7 +5,7 @@
     -if selected as manager, it will ask the user for a series of managerial options
 
 
-###Customer Perspective
+### Customer Perspective
 2. A. This app is first designed by running the node bamazonCustomer.js file
     -A table is displayed showing the id, the item, the price and the stock quantity
     -The user is then asked to type in the id of the item they would like to purchase
@@ -15,7 +15,7 @@
     -If the user enters an amount less than the current stock quantity, than that number is subtracted from the database stock quantity
     -A message is shown with the total price
 
-###Manager Perspective
+### Manager Perspective
     B. This app is first run by the command node bamazongManager.js
         -A list of options appears asking the user if they want to:
             1.View Products for Sale
@@ -30,12 +30,12 @@
 3. The information is stored in a table inside a mysql database. Any time information is updated by the user, the table is automatically updated as well
 
 4.Link to screenshots: 
-###Customer Perspectiev
+### Customer Perspectiev
 ![main-menu](assets/images/MainTable.png)
 
 ![after-purchase](assets/images/purchaseComplete.png)
 
-###Manager Perspective
+### Manager Perspective
 ![main-menu](assets/images/mainMenuManager.png)
 
 ![view-products](assets/images/viewProducts.png)
