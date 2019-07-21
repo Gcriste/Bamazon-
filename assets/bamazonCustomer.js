@@ -41,7 +41,10 @@ function currentProducts() {
                 stock: results[i].stock_quantity
             })
         }
-        console.table(choiceArray);
+        for (var i =0;i<choiceArray.length;i++){
+             console.log(choiceArray[i].id, choiceArray[i].name, choiceArray[i].price)
+            
+           };
         selectProduct();
 
     })
