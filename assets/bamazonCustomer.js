@@ -26,7 +26,7 @@ connection.connect(function (err) {
 
 
 
-
+//function for the current products coming from mysql table
 function currentProducts() {
     connection.query("SELECT * FROM products", function (err, results) {
         if (err) throw err;
@@ -47,6 +47,7 @@ function currentProducts() {
     })
 }
 
+//function to ask the user about the product id and the number of items they woud like to purchase
 function selectProduct() {
 
     connection.query("SELECT * FROM products", function (err, results) {
@@ -76,6 +77,9 @@ function selectProduct() {
                     }
                 }
             ])
+
+
+            // function for the answers provided by user
             .then(function (answer) {
                 var answerId = answer.choice;
 
@@ -84,7 +88,6 @@ function selectProduct() {
                     if (err) throw err;
                     for (var i = 0; i < res.length; i++) {
                     var currentStock = res[i].stock_quantity 
-                    console.log(currentStock)
                     if (currentStock> answer.buy){
                         var newStock = currentStock-answer.buy;
                         connection.query("UPDATE products SET ? WHERE ?",

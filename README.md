@@ -23,7 +23,7 @@
 
 ![main-menu](assets/images/MainTable.png)
 
-![after-purchase](assets/images/Afterpurchase.png)
+![after-purchase](assets/images/purchaseComplete.png)
 
 
 5. link : https://gcriste.github.io/Bamazon-/
