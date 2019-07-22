@@ -1,6 +1,6 @@
 # Bamazon-App
 
-1. This App is designed to act as an amazon-like storefront from two different user perspectives(the customer and manager) 
+1.This App is designed to act as an amazon-like storefront from two different user perspectives(the customer and manager) 
     -if selected as customer, it will update the inventory of an item after a purchase is made
     -if selected as manager, it will ask the user for a series of managerial options
 
@@ -27,7 +27,7 @@
     -If the user selects add to inventory, the user is then asked to select which item and how many they would like to add to the current stock
     -If the user selects add new product, the user is asked to type in the name, department, price and stock of the new item 
 
-3. The information is stored in a table inside a mysql database. Any time information is updated by the user, the table is automatically updated as well
+3.The information is stored in a table inside a mysql database. Any time information is updated by the user, the table is automatically updated as well
 
 4.Link to screenshots: 
 ### Customer Perspective
